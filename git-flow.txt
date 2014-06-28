@@ -5,14 +5,14 @@ Our GIT FLOW Process
 > git pull origin master
 
 Before start working, create a feature branch with your name as prefix
-> git checkout -b mthomas/<feature_or_bug_name>
+> git checkout -b mathewt/<feature_or_bug_name>
 
 Add your files and commit
 > git add .
 > git commit -m "Your description"
 
 Push your changes to Github
-> git push origin mthomas/<feature_or_bug_name>
+> git push origin mathewt/<feature_or_bug_name>
 
 Go into Github and open Pull Request from your branch to the target branch (in simple cases the "master" branch)
 
@@ -27,7 +27,7 @@ Make sure you are in your current feature branch do the following:
 
 If there are no conflicts, then push your branch again
 
-> git push origin mthomas/<feature_or_bug_name>
+> git push origin mathewt/<feature_or_bug_name>
 
 If there are conflicts, you would need to abort the merge and do the following:
 
@@ -42,5 +42,5 @@ Fix all the conflicts one commit at a time. For every commit fix do:
 
 Rinse and repeat until all the commits have been rebased, then push your branch to github:
 
-> git push origin mthomas/<feature_or_bug_name>
+> git push origin mathewt/<feature_or_bug_name>
 
