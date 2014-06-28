@@ -1,0 +1,46 @@
+Our GIT FLOW Process
+===============================
+
+> git checkout master
+> git pull origin master
+
+Before start working, create a feature branch with your name as prefix
+> git checkout -b mthomas/<feature_or_bug_name>
+
+Add your files and commit
+> git add .
+> git commit -m "Your description"
+
+Push your changes to Github
+> git push origin mthomas/<feature_or_bug_name>
+
+Go into Github and open Pull Request from your branch to the target branch (in simple cases the "master" branch)
+
+Rinse and repeat.... Note: This is a simple happy path, if your branch is not up-to-date you would need to merge master into your branch prior to you pushing to Github to minimize merging conflicts.... 
+
+In case of needing to merge:
+
+Make sure you are in your current feature branch do the following:
+> git fetch origin master:master
+
+> git merge --no-ff master
+
+If there are no conflicts, then push your branch again
+
+> git push origin mthomas/<feature_or_bug_name>
+
+If there are conflicts, you would need to abort the merge and do the following:
+
+> git merge --abort
+
+> git rebase master
+
+Fix all the conflicts one commit at a time. For every commit fix do:
+
+> git add <the_files_you_have_fixed>
+> git rebase --continue
+
+Rinse and repeat until all the commits have been rebased, then push your branch to github:
+
+> git push origin mthomas/<feature_or_bug_name>
+
